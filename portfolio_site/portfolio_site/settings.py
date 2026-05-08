@@ -125,3 +125,11 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
+# HTTPS
+CSRF_TRUSTED_ORIGINS = ['https://gravessoftware.dev']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+
+
