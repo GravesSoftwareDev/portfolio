@@ -6,7 +6,6 @@
     --purple-mid: #7B00D4;
     --purple-bright: #A855F7;
     --accent-pink: #FF2D9B;
-    --accent-yellow: #FFD600;
     --accent-cyan: #00E5FF;
     --bg-dark: #0A0010;
     --bg-card: #1A0030;
@@ -14,7 +13,16 @@
     --text-muted: #9E86B8;
 }
 
+/* Clear Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: var(--bg-dark);
+}
 
 /* Nav bar syling */
 
@@ -57,7 +65,7 @@
 }
 
 .nav-links a:hover {
-    color: var(--accent-yellow);
+    color: var(--accent-cyan);
 }
 
 /* Hero section styling */
@@ -99,7 +107,7 @@
 }
 
 .dot {
-    color: var(--accent-yellow);
+    color: var(--accent-cyan);
 }
 
 .hero-sub {
@@ -136,8 +144,8 @@
 }
 
 .btn-outline:hover {
-    border-color: var(--accent-yellow);
-    color: var(--accent-yellow);
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
     transform: translateY(-2px);
 }
 
