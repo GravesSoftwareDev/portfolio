@@ -5,9 +5,9 @@
     --bg-card: #111111;
     --bg-section-alt: #0D0D0D;
     --text-light: #D4D4D4;
-    --text-muted: #4A4A4A;
+    --text-muted: #808080;
     --accent: #BF5FFF;
-    --accent-dim: #7B2FBE;
+    --accent-dim: #A855F7;
     --accent-secondary: #00E5FF;
     --white: #ffffff;
 
@@ -344,7 +344,7 @@ html[data-theme="light"] .theme-toggle .icon-moon { display: block; }
     font-size: 0.95rem;
     color: var(--text-muted);
     line-height: 1.8;
-    max-width: 650px;
+    max-width: 800px;
 }
 
 /* ─── Skills ────────────────────────────────────────────────────────────── */
