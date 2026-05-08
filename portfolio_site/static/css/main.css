@@ -122,6 +122,35 @@ body {
     color: var(--accent-cyan);
 }
 
+/* ─── Nav Actions (hamburger + theme toggle) ────────────────────────────── */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* ─── Hamburger (hidden on desktop) ─────────────────────────────────────── */
+.nav-hamburger {
+    display: none;
+    background: none;
+    border: 1px solid var(--purple-mid);
+    color: var(--text-muted);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    align-items: center;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav-hamburger:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+}
+
+.nav-hamburger .icon-close { display: none; }
+.nav-hamburger.open .icon-menu  { display: none; }
+.nav-hamburger.open .icon-close { display: block; }
+
 /* ─── Theme Toggle ──────────────────────────────────────────────────────── */
 .theme-toggle {
     background: none;
@@ -390,4 +419,62 @@ html[data-theme="light"] .section-alt::before {
 html[data-theme="light"] .skill-tag {
     background-color: var(--bg-card);
     color: var(--purple-mid);
+}
+
+/* ─── Responsive: Tablet (≤ 768px) ─────────────────────────────────────── */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 5rem 1.5rem;
+        --hero-padding: 3.5rem 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ─── Responsive: Mobile (≤ 600px) ─────────────────────────────────────── */
+@media (max-width: 600px) {
+    :root {
+        --section-padding: 4rem 1.25rem;
+        --hero-padding: 3rem 1.25rem;
+        --hero-min-height: 85vh;
+        --nav-padding: 1rem 1.25rem;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--bg-dark);
+        border-bottom: 2px solid var(--purple-mid);
+        z-index: var(--z-nav);
+        transition: background-color var(--transition-base);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.9rem 1.25rem;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
 }
